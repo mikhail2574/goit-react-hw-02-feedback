@@ -2,5 +2,5 @@ import React from "react";
 import css from "./Notification.module.css"
 
 export const Notification = ({ message }) => {
-    return (<h3>{message}</h3>);
+    return (<h3 className={css.notification}>{message}</h3>);
 }

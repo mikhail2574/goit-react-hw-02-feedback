@@ -1,5 +1,4 @@
-import React, { Fragment, Component } from "react";
-import { ReactDOM } from "react-dom";
+import React, { Fragment} from "react";
 import { Form } from "./Form/Form";
 
 export const App = () => {
