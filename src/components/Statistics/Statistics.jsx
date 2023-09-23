@@ -1,14 +1,16 @@
-import React from "react";
-import css from "./Statistics.module.css";
-import { Notification } from "../Notification/Notification";
+import React from 'react';
+import css from './Statistics.module.css';
+import { Notification } from '../Notification/Notification';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({ data }) => {
-    let { good, neutral, bad } = data;
+  let { good, neutral, bad } = data;
 
-    const countTotalFeedback = () => good + neutral + bad;
-    const countPositiveFeedbackPercentage = () => good / countTotalFeedback() * 100;
+  const countTotalFeedback = () => good + neutral + bad;
+  const countPositiveFeedbackPercentage = () =>
+    (good / countTotalFeedback()) * 100;
 
-return (
+  return (
     <div className={`${css.statistics}`}>
       {countTotalFeedback() === 0 ? (
         <Notification message="There is no feedback" />
@@ -40,4 +42,8 @@ return (
       )}
     </div>
   );
-}
+};
+
+Statistics.propTypes = {
+  data: PropTypes.object.isRequired,
+};
