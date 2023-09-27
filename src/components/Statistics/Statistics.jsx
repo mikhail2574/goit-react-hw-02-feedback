@@ -12,9 +12,7 @@ export const Statistics = ({ data }) => {
 
   return (
     <div className={`${css.statistics}`}>
-      {countTotalFeedback() === 0 ? (
-        <Notification message="There is no feedback" />
-      ) : (
+      {countTotalFeedback() ? (
         <ul className={css.list}>
           <li className={css.listItem}>
             <p>Good</p>
@@ -39,6 +37,8 @@ export const Statistics = ({ data }) => {
             </span>
           </li>
         </ul>
+      ) : (
+        ''
       )}
     </div>
   );
