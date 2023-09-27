@@ -1,6 +1,5 @@
 import React from 'react';
 import css from './Statistics.module.css';
-import { Notification } from '../Notification/Notification';
 import PropTypes from 'prop-types';
 
 export const Statistics = ({ data }) => {
