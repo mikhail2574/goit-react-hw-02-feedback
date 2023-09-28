@@ -11,34 +11,30 @@ export const Statistics = ({ data }) => {
 
   return (
     <div className={`${css.statistics}`}>
-      {countTotalFeedback() ? (
-        <ul className={css.list}>
-          <li className={css.listItem}>
-            <p>Good</p>
-            <span>{good}</span>
-          </li>
-          <li className={css.listItem}>
-            <p>Neutral</p>
-            <span>{neutral}</span>
-          </li>
-          <li className={css.listItem}>
-            <p>Bad</p>
-            <span>{bad}</span>
-          </li>
-          <li className={css.listItem}>
-            <p>Total</p>
-            <span className={css.spanRes}>{countTotalFeedback()}</span>
-          </li>
-          <li className={css.listItem}>
-            <p>Positive feedback</p>
-            <span className={css.spanRes}>
-              {countPositiveFeedbackPercentage().toFixed(1)}%
-            </span>
-          </li>
-        </ul>
-      ) : (
-        ''
-      )}
+      <ul className={css.list}>
+        <li className={css.listItem}>
+          <p>Good</p>
+          <span>{good}</span>
+        </li>
+        <li className={css.listItem}>
+          <p>Neutral</p>
+          <span>{neutral}</span>
+        </li>
+        <li className={css.listItem}>
+          <p>Bad</p>
+          <span>{bad}</span>
+        </li>
+        <li className={css.listItem}>
+          <p>Total</p>
+          <span className={css.spanRes}>{countTotalFeedback()}</span>
+        </li>
+        <li className={css.listItem}>
+          <p>Positive feedback</p>
+          <span className={css.spanRes}>
+            {countPositiveFeedbackPercentage().toFixed(1)}%
+          </span>
+        </li>
+      </ul>
     </div>
   );
 };

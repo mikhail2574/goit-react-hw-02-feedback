@@ -54,7 +54,11 @@ export class Form extends Component {
           </form>
         </div>
         <h2>Statistics</h2>
-        <Statistics data={this.state} />
+        {this.state.good || this.state.neutral || this.state.bad ? (
+          <Statistics data={this.state} />
+        ) : (
+          'No feedbacks yet'
+        )}
       </>
     );
   }
